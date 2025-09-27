@@ -5,7 +5,7 @@ import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   return (
-    <nav className="p-4 flex items-center justify-between">
+    <nav className="p-4 flex items-center justify-between border-b-2">
       {/* Left */}
       <SidebarTrigger />
       {/* Right */}

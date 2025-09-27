@@ -35,7 +35,7 @@ export default function RootLayout({
           enableSystem={false}
         >
           {/* <Navbar /> */}
-          {children}
+          <main> {children}</main>
         </ThemeProvider>
       </body>
     </html>

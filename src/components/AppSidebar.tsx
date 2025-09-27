@@ -37,7 +37,7 @@ import {
 const projects = [
   {
     name: "All Project",
-    url: `/projects`,
+    url: `/dashboard/projects`,
     icon: Project,
   },
   {

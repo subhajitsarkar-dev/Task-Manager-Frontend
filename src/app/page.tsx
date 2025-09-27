@@ -1,103 +1,72 @@
+import Pattern from "@/components/Pattern";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen w-full bg-[#020617] relative">
+      {/* Cyan Radial Glow Background */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          backgroundImage: `radial-gradient(circle 500px at 50% 100px, rgba(6,182,212,0.4), transparent)`,
+        }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Your Content/Components */}
+      <div className="lg:max-w-5xl mx-auto relative z-10">
+        {/* Navbar */}
+        <nav className="flex justify-between items-center p-4">
+          <div className="font-semibold text-xl text-white">TaskPrime</div>
+          <div className="flex gap-2 items-center">
+            <button
+              className="
+                  relative cursor-pointer rounded-xl border border-neutral-700 px-6             py-3 text-white
+                  bg-transparent
+                  shadow-md transition-shadow duration-300
+                  hover:shadow-[0_18px_50px_rgba(6,182,212,0.22)]
+    "
+            >
+              <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+              Login
+            </button>
+            <button
+              className="
+                  relative cursor-pointer rounded-xl border border-neutral-700 px-6 py-3 text-white
+                  bg-transparent shadow-md transition-shadow duration-300
+                  hover:shadow-[0_18px_50px_rgba(6,182,212,0.22)]
+    "
+            >
+              <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+              Signup
+            </button>
+          </div>
+        </nav>
+
+        {/* Hero Title */}
+        <div className="flex flex-col justify-center items-center px-6 my-20">
+          <h1 className="text-6xl max-w-3xl text-center font-bold tracking-tight leading-16 bg-gradient-to-b from-neutral-50 to-neutral-500 bg-clip-text text-transparent">
+            The Ultimate Task Manager to Boost Productivity
+          </h1>
+          <p className="max-w-xl text-center text-lg text-neutral-500 mt-10">
+            Stay organized and boost productivity with TaskPrime. Create, track,
+            and manage tasks effortlessly with a clean, intuitive interface
+            designed to help you focus on what matters.
+          </p>
+          <div className="mt-8">
+            <button
+              className="
+                  relative cursor-pointer rounded-xl border border-neutral-700 px-6             py-3 text-white
+                  bg-transparent
+                  shadow-md transition-shadow duration-300
+                  hover:shadow-[0_18px_50px_rgba(6,182,212,0.22)]
+    "
+            >
+              <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+              Go to Dashboard
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
