@@ -1,5 +1,6 @@
 import Pattern from "@/components/Pattern";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,27 +19,31 @@ export default function Home() {
         <nav className="flex justify-between items-center p-4">
           <div className="font-semibold text-xl text-white">TaskPrime</div>
           <div className="flex gap-2 items-center">
-            <button
-              className="
+            <Link href={"/login"}>
+              <button
+                className="
                   relative cursor-pointer rounded-xl border border-neutral-700 px-6             py-3 text-white
                   bg-transparent
                   shadow-md transition-shadow duration-300
                   hover:shadow-[0_18px_50px_rgba(6,182,212,0.22)]
     "
-            >
-              <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
-              Login
-            </button>
-            <button
-              className="
+              >
+                <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+                Login
+              </button>
+            </Link>
+            <Link href={"/signup"}>
+              <button
+                className="
                   relative cursor-pointer rounded-xl border border-neutral-700 px-6 py-3 text-white
                   bg-transparent shadow-md transition-shadow duration-300
                   hover:shadow-[0_18px_50px_rgba(6,182,212,0.22)]
     "
-            >
-              <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
-              Signup
-            </button>
+              >
+                <div className="absolute inset-x-0 -bottom-px h-px w-full bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
+                Signup
+              </button>
+            </Link>
           </div>
         </nav>
 
