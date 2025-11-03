@@ -39,9 +39,11 @@ function SignupForm({ className, ...props }: React.ComponentProps<"div">) {
     resolver: zodResolver(registerSchema),
     mode: "all",
   });
+
   const registerHandler = (data: RegisterType) => {
     console.log(data);
   };
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
@@ -146,7 +148,7 @@ function SignupForm({ className, ...props }: React.ComponentProps<"div">) {
                 <Field>
                   <Button type="submit">Create Account</Button>
                   <FieldDescription className="text-center">
-                    Already have an account? <a href="#">Sign in</a>
+                    Already have an account? <a href="/login">Sign in</a>
                   </FieldDescription>
                 </Field>
               </FieldGroup>

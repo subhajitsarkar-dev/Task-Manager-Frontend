@@ -1,4 +1,5 @@
 import z4 from "zod/v4";
-import { registerSchema } from "./formschemas";
+import { loginSchema, registerSchema } from "./formschemas";
 
 export type RegisterType = z4.infer<typeof registerSchema>;
+export type LoginType = z4.infer<typeof loginSchema>;

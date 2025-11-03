@@ -11,3 +11,13 @@ export const registerSchema = z4.object({
     .string()
     .length(10, { message: "Password must be exactly 10 characters" }),
 });
+
+export const loginSchema = z4.object({
+  email: z4
+    .string()
+    .email({ message: "Invalid email address" })
+    .endsWith(".com"),
+  password: z4
+    .string()
+    .length(10, { message: "Password must be exactly 10 characters" }),
+});
